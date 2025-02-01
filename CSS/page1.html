@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS File List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-900 text-white font-sans p-4">
+    <h1 class="text-3xl font-bold mb-6">CSS File List</h1>
+    <div id="file-list" class="space-y-2"></div>
+
+    <script>
+      // File list
+      const files = [
+        "css2.html",
+        "csslists.html",
+        "csspositioning.html",
+        "csstable.html",
+        "cssoutline.html",
+        "cssbackgroundcolor.html",
+        "cssimglists.html",
+        "extcss.css",
+        "csszindex.html",
+        "csslinks.html",
+        "cssdecoration.html",
+        "csslistscoloured.html",
+        "cssindent.html",
+        "cssborder.html",
+        "csscolor.html",
+        "csstransform.html",
+        "Inline CSS.html",
+        "cssclass.html",
+        "cssfonts.html",
+        "Thumbs.db.doc",
+        "internalcss.html",
+        "extcss.html",
+        "cssletter_word_space.html",
+        "csslistposition.html",
+        "cssimage.html",
+        "test.py",
+        "csslinkbutton.html",
+        "cssid.html",
+        "cssmargins.html",
+        "cssalign.html",
+        "cssmargins1.html",
+        "star.jpg",
+        "csstransparentbox.html",
+        "cssfixedimage.html",
+        "csspadding.html",
+        "csstextalign.html",
+        "paper.jpg",
+        "cssinherit.html",
+        "cssbox.html",
+        "cssshadow.html",
+        "csslinespacing.html",
+        "cssopacity.html",
+        "cssclip.html",
+      ];
+
+      // Filter only `.html` files
+      const htmlFiles = files.filter((file) => file.endsWith(".html"));
+
+      // Container for the file list
+      const fileListContainer = document.getElementById("file-list");
+
+      // Create links for each HTML file
+      htmlFiles.forEach((file) => {
+        const link = document.createElement("a");
+        link.href = `./${file}`;
+        link.textContent = file;
+        link.className = "text-green-400 hover:underline block";
+        fileListContainer.appendChild(link);
+      });
+    </script>
+  </body>
+</html>
