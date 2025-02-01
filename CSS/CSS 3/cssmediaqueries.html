@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: yellow;
+}
+
+/* Following media queries are used to set the background-color of the web page to pink if the viewport is greater than or equal to 600 pixels and to lightgreen if the viewport is between 400 and 599 pixels wide. If the viewport is smaller than 400 pixels, then the background-color is set to yellow. */
+
+@media screen and (min-width: 400px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background-color: pink;
+  }
+}
+
+/* Following media queries will set the color of text to red when displayed on screen, but will set it to black when it is printed */ 
+
+@media screen {
+  body {
+    color: red; 
+  }
+}
+
+@media print {
+  body {
+    color: black; 
+  }
+}
+
+/* following media query is demonstration of multiple media queries separated by comma. It works as OR condition. When the browser's viewport will be between 600 and 900px OR above 1100px , the color of the text will change to blue */
+
+@media screen and (max-width: 900px) and (min-width: 600px), (min-width:1100px) {
+  body {
+    color: blue;
+  }
+}
+</style>
+</head>
+<body>
+<h1>Resize the browser window to witness the effects of various media queries</h1>
+</body> 
+</html>

@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>First Page</title>
+</head>
+<body>
+<form action="first.html" method="post"> 
+<fieldset>
+    <legend>Personal information:</legend>  
+First name:<input type="text" name="fname" value="John" size="10" maxlength="20" required autofocus><br><br>
+Last name:<input type="text" name="lstname"  placeholder="Doe" size="10" required autofocus><br><br>
+Gender : <input type="radio" name="Gender" value="M" > Male
+<input type="radio" name="Gender" value="F" checked> Female
+<input type="radio" name="Gender" value="O"> Other<br><br>
+
+Salutation : <input type="radio" name="sal" value="mr" > Mr.
+<input type="radio" name="sal" value="ms" checked> Miss
+<input type="radio" name="sal" value="mrs"> Mrs.<br><br>
+<!-- Commentsssss -->
+Email : <input type="email" name="emailid" placeholder="xyz@abc.com" required> <br><br>
+password:<input type="password" name="pwd"> <br><br>
+Website : <input type="url" name="website"><br><br>
+Mobile number (in format: 123-456-7890) : <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br><br>
+Department : 
+<select name="dept">
+<option>Computers
+<option selected>EXTC</option>
+<option>Mech</option>
+<option>IT</option>
+<option>Data Science</option>
+</select><br><br>
+
+Address : <textarea name="address" rows="5" cols="10"></textarea><br><br>
+
+State :<input list="state">
+  <datalist id="state">
+    <option value="Maharashtra">
+    <option value="Gujrat">
+    <option value="Karnataka">
+    <option value="Andhra Pradesh">
+    <option value="Arunachal Pradesh">
+    <option value="Uttar Pradesh">
+    <option value="Uttarakhand">
+  </datalist> 
+  
+<br><br>
+Schedule Appointment : <input type="datetime-local" name="appointment"><br><br>
+Date of Birth: <input type="date" name="dob" min="1980-01-01" max="2020-12-01">
+Time of Birth : <input type="time">
+Age : <input type="number" min="0" max="50" step="5" value="5"><br><br>
+
+Your Favourite Colour: <input type="color" name="favcolor"> <br><br>
+</fieldset><br>
+
+<fieldset>
+<legend> Hobbies</legend>
+I like Music: <input type="checkbox" name="hobby" value="Music" checked>
+<br>
+I like Painting: <input type="checkbox" name="hobby" value="Painting" checked>
+<br>
+I like Reading: <input type="checkbox" name="hobby" value="Reading"><br>
+</fieldset><br>
+
+Upload your Resume : <input type="file"><br><br>
+
+Rate yourself on scale of 10: <input type="range" name="rate" min="0" max="10" step="2"><br>
+
+Video : <video width="320" height="300" controls loop autoplay>
+  <source src="vid.mp4" type="video/mp4">
+ </video><br>
+
+<br>
+
+Audio : <audio autoplay loop controls>
+   <source src="music.mp3" type="audio/mp3">
+</audio> <br>
+
+<br>
+Enter Search String: <input type="search" name="findme"><br><br>
+
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+<input type="button" onclick="alert('Hello')" value="Click me !!"><br><br>
+<button type="button" onclick="alert('Hello')">Click here</button><br><br>
+ 
+
+</form>
+</body>
+</html>
