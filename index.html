@@ -27,10 +27,11 @@
   </head>
 
   <body
-    class="bg-neutral-950 text-white font-poppins flex flex-col items-center justify-center"
+    class="bg-neutral-950 text-white font-poppins flex flex-col items-center justify-between min-h-screen"
   >
+    <!-- Navigation Bar -->
     <nav
-      class="absolute top-0 left-0 w-screen h-20 bg-neutral-900 flex items-center justify-between p-4"
+      class="w-screen h-20 bg-neutral-900 flex items-center justify-between p-4"
     >
       <a href="/" class="text-4xl font-bold"> Home </a>
       <a
@@ -42,17 +43,19 @@
       </a>
     </nav>
 
-    <div>
+    <!-- Content Section -->
+    <div class="flex flex-col items-center gap-4 mt-20">
       <div>
-        <a href="/HTML/index.html">HTML Codes</a>
+        <a href="/HTML/page1.html" class="text-xl text-rose-500 hover:underline">HTML Codes</a>
       </div>
       <div>
-        <a href="/CSS/Index.html">CSS Codes</a>
+        <a href="/CSS/index.html" class="text-xl text-rose-500 hover:underline">CSS Codes</a>
       </div>
     </div>
 
+    <!-- Footer -->
     <footer
-      class="absolute bottom-0 left-0 w-screen h-12 bg-neutral-900 drop-shadow-2xl backdrop-opacity-10 flex items-center justify-center p-4"
+      class="w-screen h-12 bg-neutral-900 drop-shadow-2xl flex items-center justify-center p-4"
     >
       <span class="text-sm">
         © 2024
@@ -64,7 +67,6 @@
           Nisarg
         </a>
       </span>
-      <span class="text-sm">
     </footer>
   </body>
 </html>

@@ -1,34 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>File List</title>
-</head>
-<body>
-  <h1>File List</h1>
-  <div id="file-list"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-neutral-950 text-white font-sans p-4">
+    <h1 class="text-3xl font-bold mb-6">File List</h1>
+    <div id="file-list" class="space-y-2"></div>
 
-  <script>
-    async function fetchFiles() {
-      try {
-        const response = await fetch('/files'); // Fetch file list from backend
-        const files = await response.json();
-        const fileListContainer = document.getElementById('file-list');
+    <script>
+      // File list
+      const files = [
+        'mixedframes.html',
+        'tableheader.html',
+        'debug.log',
+        'best_road_big.jpg',
+        'cellspacing.html',
+        'ex3 attributes.html',
+        'cellpadding.html',
+        'frames.html',
+        'vertical.html',
+        'layers.html',
+        'MBATech.html',
+        'paragraph.html',
+        'maincollage2.jpg',
+        'frame_b.html',
+        'div.html',
+        'inlineframes.html',
+        'ex5 div.html',
+        'marquee.html',
+        'ex2 basic tags.html',
+        'menu1.html',
+        'ringin.wav',
+        'forms.html',
+        'ImageMap.html',
+        'objects.html',
+        'frame index.html',
+        'ex4 font.html',
+        'Thumbs.db.doc',
+        'target.html',
+        'suggestions.gif',
+        'nestedtable.html',
+        'Unordered List.html',
+        'FindComp.avi',
+        'ismap.html',
+        'noframes.html',
+        'frame_a.html',
+        'noresize.html',
+        'planets.gif',
+        'font.html',
+        'tableborder.html',
+        '2.html',
+        'first.html',
+        'test.py',
+        'ex11 blockquote.html',
+        'page1.html',
+        'tablealign.html',
+        'equiv.html',
+        'ex html structure.html',
+        'ex12 pre.html',
+        'content.html',
+        'tables.html',
+        'ex10 dl.html',
+        'hackanm.gif',
+        'ex7 links.html',
+        'frame_c.html',
+        'Ordered List.html',
+        'menu.html',
+        'ex6 img.html',
+        'ex9 lists.html',
+        'ismap1.html',
+        'horizontal.html',
+        '1.html',
+        'Nested Lists.html',
+        'formdemo.html',
+        'MBATech2.html',
+        'sampletable.html',
+        'mixedframes (1).html',
+        'meta.html',
+        'tablespan.html',
+        'ex8 hr.html',
+        'ex1 tags type.html',
+      ];
 
-        files.forEach(file => {
-          const link = document.createElement('a');
-          link.href = `./${file}`;
-          link.textContent = file;
-          link.style.display = 'block'; // Display each link on a new line
-          fileListContainer.appendChild(link);
-        });
-      } catch (error) {
-        console.error('Error fetching file list:', error);
-      }
-    }
+      // Filter only `.html` files
+      const htmlFiles = files.filter((file) => file.endsWith('.html'));
 
-    fetchFiles();
-  </script>
-</body>
+      // Container for the file list
+      const fileListContainer = document.getElementById('file-list');
+
+      // Create links for each HTML file
+      htmlFiles.forEach((file) => {
+        const link = document.createElement('a');
+        link.href = `./${file}`;
+        link.textContent = file;
+        link.className = 'text-blue-400 hover:underline block';
+        fileListContainer.appendChild(link);
+      });
+    </script>
+  </body>
 </html>
