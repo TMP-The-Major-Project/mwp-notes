@@ -6,7 +6,7 @@
     <title>CSS File List</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-gray-900 text-white font-sans p-4">
+  <body class="bg-neutral-950 text-white font-sans p-4">
     <h1 class="text-3xl font-bold mb-6">CSS File List</h1>
     <div id="file-list" class="space-y-2"></div>
 
@@ -69,7 +69,7 @@
         const link = document.createElement("a");
         link.href = `./${file}`;
         link.textContent = file;
-        link.className = "text-green-400 hover:underline block";
+        link.className = "text-rose-400 hover:underline block";
         fileListContainer.appendChild(link);
       });
     </script>
