@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("input").focus(function(){
+    $(this).css("background-color", "yellow");
+  });
+  $("input").blur(function(){
+    $(this).css("background-color", "lightgrey");
+  });
+});
+</script>
+</head>
+<body>
+
+First Name: <input type="text" name="fname"><br><br>
+Last name: <input type="text" name="lname">
+
+</body>
+</html>

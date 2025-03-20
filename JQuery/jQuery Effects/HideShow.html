@@ -1,0 +1,23 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("h1").hide("slow", function(){
+    alert("Animation complete");
+    });
+});
+ 
+  $("#show").click(function(){
+    $("h1").show();
+  });
+});
+</script>
+</head>
+<body>
+<h1>This is a jQuery code</h1>
+<input type="button" id="hide" value="Hide">
+<input type="button" id="show" value="Show">
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/bootstrap.js"></script>
+</head>
+<body>
+
+ 
+<div class="container">
+  <div class="table-responsive">
+    <!--The .table-responsive class adds a scrollbar to the table when needed (when it is too big horizontally)-->
+  <h2 class="text-center">Basic Table</h2>
+  <!-- The .table class adds basic styling like light padding and horizontal dividers to a table. By default a table is coloured as table-light-->
+  <!-- The .table-striped class adds zebra-stripes to a table --> 
+  <!-- The .table-bordered class adds borders to a table -->
+  <!-- The .table-hover class enables a hover state on table rows -->
+  <!-- The .table-sm class makes a table more compact by cutting cell padding in half -->  
+  
+<table class="table table-bordered table-striped table-hover table-sm bg-success">
+    <thead>
+      <tr class="bg-info">  <!-- Using Contextual Classes to color the table -->
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="bg-warning">John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+  <br><br>
+  <table class="table table-success table-striped table-borderless table-hover">
+    <thead class="table-warning">
+      <tr>  
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-danger">
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td class="table-dark">Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+</body>
+</html>

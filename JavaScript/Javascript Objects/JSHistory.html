@@ -1,0 +1,48 @@
+
+<html>
+<head>
+	<title>JavaScript History Object</title>
+	<script>
+		function dispCount()
+		{
+			var historyCount = history.length;
+			alert("Hi, you have visited " + historyCount + " web pages so far.");
+			history.length++;
+		}
+		function funBackward()
+		{
+			window.history.back()
+		}
+		function funForward()
+		{
+			window.history.forward()
+		}
+		function funGo()
+		{
+			window.history.go(2)
+		}
+		function funGoBack()
+		{
+			window.history.go(-1)
+		}
+	</script>
+</head>
+<body>
+
+<h3>JavaScript History Object Example</h3>
+<a href="http://www.google.com">click to visit google</a><br>
+<a href="1.html">Javascript Page</a><br>
+<a href="2.html">Another Javascript Page</a><br>
+<a href="http://www.google.com">click to visit google</a><br>
+<a href="http://www.youtube.com">click to visit youtube</a><br><br>
+
+<form>
+	<input type="button" name="history" value="My History" onclick="dispCount()">
+	<input type="button" name="btgo" value="Go to Next Link" onclick="funGo();">
+	<input type="button" name="btgoba" value="Go to Previous Link" onclick="funGoBack();">
+	<input type="button" name="btfo" value="Forward" onclick="funForward();">
+	<input type="button" name="btba" value="Backward" onclick="funBackward();">
+</form>
+	
+</body>
+</html>

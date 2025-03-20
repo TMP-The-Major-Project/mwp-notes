@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.descendants * { 
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("div").children().css({"color":"blue","fontWeight":"Bold", "border":"3px solid blue"});
+});
+</script>
+</head>
+<body>
+
+<div class="descendants">main div
+  <div style="width:500px;">div
+   <p> p </p>
+    <ul>ul
+      <li>li
+        <span>span</span>
+      </li>
+    </ul>   
+  </div>
+
+<div style="width:500px;">div
+    <p>p 
+      <span>span</span>
+    </p> 
+  </div>
+</div>
+
+</body>
+</html>

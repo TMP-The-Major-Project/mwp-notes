@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.siblings * { 
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("h3").nextUntil("h4").css({"color":"blue","fontWeight":"Bold", "border":"3px solid blue"});
+});
+</script>
+</head>
+<body class="siblings">body
+
+<div>main div
+    <p>p</p>
+    <h3>h3</h3>
+    <ul>ul
+      <li>li
+        <span>span</span>
+      </li>
+    </ul>  
+    <p>p </p>
+    <h4> h4 </h4>
+ 
+
+</div>
+
+</body>
+</html>

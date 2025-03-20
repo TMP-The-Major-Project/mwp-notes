@@ -1,0 +1,208 @@
+<html>
+<head>
+<title>validation</title>
+<script>
+        function verify() {
+
+            //name field must take some input. It cannot be left blank
+
+            if (document.form1.name.value == "") {        //if name field is blank then alert is thrown
+                alert("Please give the name");
+                document.form1.name.focus();                  // name field is highlighted to aid user locate it and fill it
+                return false;
+            }
+
+           //email field must take some input. It cannot be left blank
+
+            if (document.form1.email.value == "") {
+                alert("Please give the email");
+               document.form1.email.focus();
+                return false;
+            }                        
+            if (document.form1.email.value.indexOf("@", 0) < 0)         //if there is no @ symbol in email address
+           {
+        alert("Email id should consist of an @.");
+        document.form1.email.focus();
+        return false;
+           }
+            if (document.form1.email.value.indexOf(".", 0) < 0)        //if there is no dot (.) in email address
+          {
+        alert("Please enter a valid e-mail address.");
+        document.form1.email.focus();
+        return false;
+          }
+
+            //age field must take some input. It cannot be left blank
+
+            if (document.form1.age.value == "") {
+                alert("Please give age");
+                document.form1.age.focus();
+                return false;
+            }
+
+            // alert thrown when age limit is below 18 and above 60
+
+            if (document.form1.age.value < 18 || document.form1.age.value > 60) {
+                alert("Please give Age range between 18 and 60");
+                document.form1.age.focus();
+                return false;
+            }
+
+            // Gender must be selected
+
+            if (document.form1.gender[0].checked == false &&
+                    document.form1.gender[1].checked == false) {
+                alert("Please select gender");
+                document.form1.gender[1].focus();
+                return false;
+            }
+
+            // At least one checkbox must be checked
+
+            if (document.form1.language[0].checked == false &&
+                    document.form1.language[1].checked == false &&
+                    document.form1.language[2].checked == false) {
+                alert("Please Select your choice of language(Atleast One)");
+               document.form1.language[0].focus();
+                return false;
+            }
+
+            //Country must be chosen
+
+            if (document.form1.country.value == "") {
+                alert("Please give country");
+                document.form1.country.focus();
+                return false;
+            }
+
+            //address field must take some input. 
+
+            if (document.form1.myaddress.value == "") {
+                alert("Please give address");
+                document.form1.myaddress.focus();
+                return false;
+            }
+
+            //username field must take some input. It cannot be left blank
+
+            if (document.form1.u_name.value == "") {
+                alert("Please give username");
+                document.form1.u_name.focus();
+                return false;
+            }
+
+           //password field must take some input. It cannot be left blank
+
+            if (document.form1.pass.value == "") {
+                alert("Please give Password");
+                document.form1.pass.focus();
+                return false;
+            }
+
+            //password length must be greater than 5 characters
+
+            if (document.form1.pass.value.length < 6) {
+                alert("Please give a Password more than 5 characters");
+                document.form1.pass.focus();
+                return false;
+            }
+
+            //retype password field must take some input. It cannot be left blank
+
+            if (document.form1.r_pass.value == "") {
+                alert("Please retype your password");
+                document.form1.r_pass.focus();
+                return false;
+            }
+
+            //password and confirm password should match
+
+            if ((document.form1.pass.value) != (document.form1.r_pass.value)) {           //if password and retype password does not match
+                alert("Your password does not match");
+                document.form1.r_pass.focus();
+                return false;
+            }
+            return true;                                  // if all fields are filled in properly then return true
+        }
+    </script>
+</head>
+<body>
+
+<form method="POST" action="validated.html" name="form1">
+
+       <table align="center" cellpadding="7" >                <!-- table is used to properly align form elements -->
+
+        <tr> 
+            <td><strong>Name:</strong></td>
+            <td><input type="text" name="name"></td>
+        </tr>
+
+      <tr> 
+      <td><strong>Email:</strong></td>
+       <td><input type="text" name="email"></td>
+      </tr>
+
+        <tr>
+            <td><strong>Age:</strong></td>
+            <td><input type="text" name="age" size="2"></td>
+        </tr>
+
+        <tr>
+            <td><strong>Gender:</strong></td>
+            <td>
+                <input type="radio" name="gender" value="Male">His
+                <input type="radio" name="gender" value="Female">Her
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Language:</strong></td>
+            <td>
+               <input type="checkbox" name="language" value="Hindi">Hindi
+                <input type="checkbox" name="language" value="English">English
+                <input type="checkbox" name="language" value="Urdu">Urdu
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Country:</strong></td>
+            <td>
+               <select name="country">
+                <option value=""> --Select-- </option>
+                <option value="in"> India </option>
+                <option value="pak"> Pakistan </option>
+                <option value="ban"> Bangladesh </option>
+                <option value="sl"> Srilanka </option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Address:</strong></td>
+            <td><textarea rows="5" cols="20" name="myaddress"></textarea>
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Username:</strong></td>
+            <td><input type="text" name="u_name"></td>
+        </tr>
+
+        <tr>
+            <td><strong>Password:</strong></td>
+            <td><input type="password" name="pass"></td>
+        </tr>
+
+        <tr>
+            <td><strong>Retype Password:</strong></td>
+            <td><input type="password" name="r_pass"></td>
+        </tr>
+
+        <tr align="center"> 
+            <td><input type="submit" value="Submit" onClick="return (verify());"></td> 
+            <td><input type="reset"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

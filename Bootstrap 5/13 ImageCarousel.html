@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/bootstrap.js"></script>
+</head>
+<body>
+<div class="container">
+  <h1 class="text-center">Carousel Example</h1>
+</div>
+<!--                             Creating Carousel                                         -->
+<!--.carousel class creates a carousel. .slide class adds transition and animation effect when sliding between images-->
+<!--data-bs-ride starts carousel by default. The slides changes with page load. without this the slides have to be changed manually-->
+<center>
+<div class="container">
+<div id="demo" class="carousel slide" data-bs-ride="carousel" style="width:75%; height:600px;">
+
+<!--                              Creating Carousel Indicators                             -->
+<!--.carousel-indicators adds indicators for the carousel. The dots that represent no. of slides are indicators
+    data-bs-target attribute is used to link the buttons to carousel
+    data-bs-slide-to attribute is used to allocate slide numbers
+    .active class is used to display the carousel. without this the carousel will not work-->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+
+  <!--                            Creating the slideshow and adding content                  -->
+  <div class="carousel-inner">                                                  <!--carousel-inner class is used to add slides to the carousel-->
+    <div class="carousel-item active">                                          <!--carousel-item class is used to specify content of each slide. active class is used to display that particular slide on page load-->
+      <img src="cat.jpg" alt="cat" style="width:100%; height:600px;">
+      <div class="carousel-caption">                                            <!--carousel-caption is used to give cation to the slides-->
+        <h3>This is a cat</h3>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="flowers.jpg" alt="flowers" style="width:100%; height:600px;">
+      <div class="carousel-caption">
+        <h3>These are some flowers</h3>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="parachute.jpg" alt="Parachute" style="width:100%; height:600px;">
+      <div class="carousel-caption">
+        <h3>These are parachutes</h3>
+      </div>
+    </div>
+
+    <!--                            Creating the left and right arrows/buttons                  -->
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+ </div>
+</center>
+</body>
+</html>
+
+

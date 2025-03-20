@@ -1,0 +1,46 @@
+<html>
+<body>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6">If the port number is default (80 for http and 443 for https), most browsers will display 0 or nothing.</p>
+<p id="demo7"></p>
+<button onclick="myFunc()">Load new document</button>
+<button onclick="myFunc1()">replace document</button>
+<script>
+function myFunction() {
+    
+    var x = "The anchor part is now: " + location.hash;
+    document.getElementById("demo").innerHTML = x;
+    var y = "Hostname & Portdetails are:" + location.host;
+    document.getElementById("demo1").innerHTML = y;
+    var z = "Hostname : " + location.hostname;
+    document.getElementById("demo2").innerHTML= z;
+    var a = "URL : " + location.href;
+    document.getElementById("demo3").innerHTML = a;
+    var b = "Origin : " + location.origin;
+    document.getElementById("demo4").innerHTML = b;
+     var c ="Path : " +  location.pathname;
+    document.getElementById("demo5").innerHTML = c;
+
+    document.getElementById("demo6").innerHTML = "The URL port number of the current page is: " + window.location.port;
+    var d = "Protocol : " + location.protocol;
+    document.getElementById("demo7").innerHTML = d;
+}
+
+    function myFunc() {
+    location.assign("https://www.google.com")
+    
+}
+
+function myFunc1() {
+    location.replace("https://www.yahoo.com")
+}
+
+</script>
+</body>
+</html>

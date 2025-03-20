@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+  <title>Bootstrap Example</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/bootstrap.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h1>Bootstrap Grid Layout Example</h1>
+  <p>Resize the browser window to see the effect.</p>
+
+<!--create a row using class="row" and then add the desired number of columns using .col-*-* classes where first * refers to grid classes (default for screen width < 576px, sm for screen width>=576px, md screen width >=768px, lg screen width>=992px, xl scrren width>=1200px, xxl screen width >=1400px) and another * refers to number of columns.
+Note that the numbers in .col-*-* should always add up to 12 for each row -->
+
+ 
+  <div class="row">
+    <div class="col-sm-3 p-5 bg-success">.col</div>
+    <div class="col-sm-3 p-5 bg-info">.col</div>
+    <div class="col-sm-3 p-5 bg-danger">.col</div>
+    <div class="col-sm-3 p-5 bg-secondary">.col</div>
+  </div>
+
+<div class="row">
+    <div class="col-sm-4 bg-primary p-5">.col</div>
+    <div class="col-sm-8 bg-warning p-5">.col</div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("h1").hide(1500);           // speed parameter is optional
+  });
+  $("#show").click(function(){
+    $("h1").show(2000);          // speed parameter is optional
+  }); 
+});
+</script>
+</head>
+<body>
+<h1>This is a jQuery code</h1>
+<input type="button" id="hide" value="Hide">
+<input type="button" id="show" value="Show">
+</body>
+</html>

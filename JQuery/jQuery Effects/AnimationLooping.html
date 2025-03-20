@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#btn").click(function(){
+    animation();
+    function animation(){
+    $("div").animate({height: '300px'}, 2000),
+  $("div").animate({width: '300px'}, 2000),
+  $("div").animate({height: '100px'}, 2000),
+  $("div").animate({width: '100px'}, 2000),
+  animation();
+    }
+  });
+
+   $("#btn1").click(function(){
+     $("div").stop(true);
+});
+});
+</script> 
+</head>
+<body>
+
+
+<button id="btn">Animate !!!</button>
+<button id="btn1">Stop</button>
+<div style="background:powderblue;height:100px;width:100px;position:relative;margin-top:10px;"></div>
+
+
+</body>
+</html>

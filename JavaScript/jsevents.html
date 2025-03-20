@@ -1,0 +1,26 @@
+<html>
+<head>
+<script>
+function myFunction() {
+    alert("Hello!!!");
+}
+
+function myFunc() {
+alert("This is keydown event");
+}
+
+function myFun() {
+alert("This is keyup event");
+}
+</script>
+</head>
+<body>
+<input type="text" onkeypress="myFunction()"> Keypress Demo <br><br>
+<input type="text" onkeydown="myFunc()"> Keydown Demo <br><br>
+<input type="text" onkeyup="myFun()"> Keyup Demo
+<h1 ondblclick="myFunction()">Double Click</h1>
+<img src="image1.jpg" onmousedown='alert("This is mouse down event");'><br><br>
+<img src="image2.jpg" onmouseup='alert("This is mouse up event");'><br><br>
+<input type="text" onfocus='this.style.background="yellow"' onblur='this.style.background="powderblue"'> Focus/Blur <br><br>
+</body>
+</html>

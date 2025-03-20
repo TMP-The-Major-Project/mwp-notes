@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").animate({height:'200px',width:"200px",top:"250px",left:"250px",opacity:"0.3",fontSize:"50px",padding:"50px"},"slow");
+  });
+});
+</script> 
+</head>
+<body>
+
+<button>Animate !!!</button>
+<p style="background:yellow;height:100px;width:100px;position:relative;margin-top:10px;">Hello</p>
+
+</body>
+</html>
+
+<!--Properties that can be animated:
+
+backgroundPositionX
+backgroundPositionY
+borderWidth
+borderBottomWidth
+borderLeftWidth
+borderRightWidth
+borderTopWidth
+borderSpacing
+margin
+marginBottom
+marginLeft
+marginRight
+marginTop
+opacity
+outlineWidth
+padding
+paddingBottom
+paddingLeft
+paddingRight
+paddingTop
+height
+width
+maxHeight
+maxWidth
+minHeight
+minWidth
+fontSize
+bottom
+left
+right
+top
+letterSpacing
+wordSpacing
+lineHeight
+textIndent  -->

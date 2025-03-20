@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>== and ===</title>
+</head>
+<body>
+<script type="text/javascript">
+// In JavaScript, equality operators are used to compare values. However, == (double equals) and === (triple equals) behave differently:
+
+// == (Loose Equality): Converts values to the same data type before comparing (type coercion).
+// === (Strict Equality): Compares both value and data type, without converting types.
+
+let s = "10"; // String
+let n = 10;   // Number
+console.log("Is s equal to n?",s == n);   // returns true. "10" (string) is converted to 10 (number). The comparison becomes 10 == 10, which is true.
+
+let a = "20"; // String
+let b = 20;   // Number
+console.log("Is a equal to b?",a === b);   // returns false. "20" (string) is not converted to 20 (number).Since they have same value but different datatypes, === returns false.
+
+console.log(0 == false);  // true  (false is converted to 0)
+console.log(0 === false); // false (strict comparison)
+
+// Performance of == is slower than === due to internal type conversion
+// Always prefer === unless you have a specific reason to use ==, as it avoids unexpected type coercion.
+</script>
+</body>
+</html>

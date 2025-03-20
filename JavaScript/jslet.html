@@ -1,0 +1,52 @@
+<html>
+<head>
+<title> Javascript var keyword </title>
+</head>
+<body>
+<script>
+// Variables declared with let can have a global, local, or block scope. 
+// Block scope is for variables declared in a block i.e. enclosed within {}. For Eg : within a function or loops.
+//The variables having the block scope can’t be accessed outside that particular code block ({block}). The variable is only available inside the block {} where you define it.
+//The let keyword is an improved version of the var keyword. It is introduced in the ES6 or EcmaScript 2015. 
+
+//use of the let keyword to declare variables in JavaScript
+console.log("use of the let keyword to declare variables in JavaScript");
+let a = 10;     //global scope
+function f() {
+    let b = 9   //local scope 
+    console.log(b);
+    console.log(a);
+}
+f();
+console.log(a);
+console.log(b); // throws "Uncaught ReferenceError: b is not defined" error   
+
+// variables declared with let can be reassigned to other values, but they cannot be redeclared (within the same scope).
+
+//re-declaring in the same scope.
+let z = 10
+console.log(z);
+z = 20
+console.log(z);
+let z = 15        // throws "SyntaxError: Identifier 'z' has already been declared"
+console.log(z); 
+
+//re-declaring in different scope.
+let m = 5
+function f() {
+    let m = 25;
+    console.log(m);
+}
+f();
+console.log(m)
+
+//Hoisting : let variables are hoisted without a default initialization. 
+// So when you try to access such variables, you get "cannot access variable before initialization" error. 
+
+console.log("Before declaring :",ab);
+let ab = "Doe";
+console.log("After declaring:",ab); 
+</script>
+</body>
+</html>
+

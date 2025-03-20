@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#btn").click(function(){
+    $("div").animate({height: '300px', opacity: '0.4'}, 2000),
+  $("div").animate({width: '300px', opacity: '0.8'}, 2000);
+  });
+
+   $("#btn1").click(function(){
+   // $("div").stop();              //  stops the current active animation, but allows the queued animations to be performed afterwards
+    $("div").stop(true);           //  stops the current active animation and clears the animation queue; so all animations on the element is stopped.
+     });
+});
+</script> 
+</head>
+<body>
+
+
+<button id="btn">Animate !!!</button>
+<button id="btn1">Stop</button>
+<div style="background:yellow;height:100px;width:100px;position:relative;margin-top:10px;"></div>
+
+
+</body>
+</html>

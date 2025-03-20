@@ -1,0 +1,51 @@
+<html>
+<head>
+<title> Javascript var keyword </title>
+</head>
+<body>
+<script>
+// Variables declared with var can have a global or local scope. 
+// Global scope is for variables declared outside functions, while local scope is for variables declared inside functions.
+//If you create a variable outside of a function in a global space, you can use it anywhere in your code.
+//If you create a variable inside a function, you can only use it within that function.
+// variables declared using var can be re-declared
+
+// use of the var keyword to declare global variables in JavaScript.
+var a = 10;
+function f() {
+    var b = 20;
+    document.write("Values of a and b are:",a," ",b);
+}
+f();
+document.write("<br>");
+document.write("Value of a outside the function is :",a);
+document.write("<br>");
+
+// var variables when declared inside a function and accessed outside of it (local scope)
+function f() {
+var x = 10;
+document.write("Value of x inside the function is :",x)
+}
+f();
+//document.write("Value of x outside the function is :",x) //will throw "Uncaught ReferenceError: x is not defined" since x is declared inside a function, its scope is local and can be accessed only within that function
+document.write("<br>");
+
+//re-declaring : Variables declared with var can be redeclared and reassigned
+var z = 10
+z = "John"        //re-assigning
+function f() {
+    var z = 20;   //re-declaring
+    document.write("Value of z inside the function:",z,"<br>");
+}
+f();
+document.write("Value of z outside the function:",z,"<br>");
+
+//Hoisting : var variables are hoisted with a default value of undefined, which makes them accessible before their line of declaration
+
+console.log("Before declaring :",ab);
+var ab = "Doe";
+console.log("After declaring:",ab);
+</script>
+</body>
+</html>
+

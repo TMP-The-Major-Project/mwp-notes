@@ -1,0 +1,26 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".class1").hover(function(){
+    alert("This is a paragraph with blue color");
+  }, function(){
+    confirm("Do u want to leave the paragraph with blue color");
+  });
+});
+</script>
+<style>
+#id1{color:red;}
+.class1{color:blue; font-weight:bold;}
+</style>
+</head>
+<body>
+
+<h1>JQuery example</h1>
+
+<p class="class1">This is my first jquery example</p>
+<p id="id1">Hello World !!!</p>
+
+</body>
+</html>

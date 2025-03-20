@@ -1,0 +1,37 @@
+<html>
+<body>
+<button onclick="myFunction()">Location Properties Demo</button>
+<button onclick="myFunc()">Load new document</button>
+<button onclick="myFunc1()">Replace document</button>
+<script>
+function myFunction() {
+	document.write("The anchor part is : " + location.hash + "<br>");
+	document.write("The host and port details are : " + location.host + "<br>");
+	document.write("The hostname is : " + location.hostname + "<br>");    
+	document.write("The complete URL is : " + location.href + "<br>");    
+	document.write("The protocol, host and port details are : " + location.origin + "<br>");    
+	document.write("The path of URL is : " + location.pathname + "<br>");    
+	document.write("The port number is : " + location.port + "<br>");     
+	document.write("The protocol used is : " + location.protocol + "<br>");
+}
+
+    function myFunc() {
+    location.assign("https://www.google.com")
+    document.write("The anchor part is : " + location.hash + "<br>");
+	document.write("The host and port details are : " + location.host + "<br>");
+	document.write("The hostname is : " + location.hostname + "<br>");    
+	document.write("The complete URL is : " + location.href + "<br>");    
+	document.write("The protocol, host and port details are : " + location.origin + "<br>");    
+	document.write("The path of URL is : " + location.pathname + "<br>");    
+	document.write("The port number is : " + location.port + "<br>");     
+	document.write("The protocol used is : " + location.protocol + "<br>");
+    
+}
+
+function myFunc1() {
+    location.replace("https://www.yahoo.com")
+}
+
+</script>
+</body>
+</html>

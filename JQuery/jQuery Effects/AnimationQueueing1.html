@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").animate({height: '300px', opacity: '0.4'}, 2000);
+    $("div").animate({width: '300px', opacity: '0.8'}, 2000);
+    $("div").animate({height: '100px', opacity: '0.4'}, 2000);
+    $("div").animate({width: '100px', opacity: '0.8'}, 2000);
+    $("div").animate({height:'hide'},2000);
+    $("div").animate({height:'show'},2000);
+  });
+});
+</script> 
+</head>
+<body>
+
+
+<button>Animate !!!</button>
+<div style="background:yellow;height:100px;width:100px;position:relative;margin-top:10px;"></div>
+
+
+</body>
+</html>
