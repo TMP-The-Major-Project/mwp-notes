@@ -7,6 +7,7 @@ def list_files_in_folder(folder_path):
 
         # Get all file names in the folder
         file_names = os.listdir(folder_path)
+        print(file_names)
 
         # Append each file name to the list
         for file in file_names:
