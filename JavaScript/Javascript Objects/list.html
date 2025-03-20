@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Javascritp General File List</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-neutral-950 text-white font-sans p-4">
+	<h1 class="text-3xl font-bold mb-6">Javascript General File List</h1>
+	<div id="file-list" class="space-y-2"></div>
+
+	<script>
+		// File list
+		const files = [
+			"JSLocation.html",
+			"JSHistory.html",
+			"JSLocation1.html",
+			"Javascript Objects.docx",
+			"JSScreen.html",
+			"JSWindow.html",
+			"JSNavigator.html",
+			"1.html",
+			"2.html",
+			"JSDOM.html",
+		];
+
+		// Filter only `.html` files
+		const htmlFiles = files.filter((file) => file.endsWith(".html"));
+
+		// Container for the file list
+		const fileListContainer = document.getElementById("file-list");
+
+		// Create links for each HTML file
+		htmlFiles.forEach((file) => {
+			const link = document.createElement("a");
+			link.href = `./${file}`;
+			link.textContent = file;
+			link.className = "text-rose-400 hover:underline block";
+			fileListContainer.appendChild(link);
+		});
+	</script>
+</body>
+
+</html>
