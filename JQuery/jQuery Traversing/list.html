@@ -1,52 +1,54 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JQuery Traversing File List</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
 
-  <body class="bg-neutral-950 text-white font-sans p-4">
-    <h1 class="text-3xl font-bold mb-6">JQuery Traversing File List</h1>
-    <div id="file-list" class="space-y-2"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JQuery Traversing File List</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-    <script>
-      // File list
-      const files = [
-        "12 prevUntil_siblings.html",
-        "1 parent.html",
-        "13 first_filtering.html",
-        "4 children.html",
-        "15 eq_filtering.html",
-        "17 not_filtering.html",
-        "14 last_filtering.html",
-        "7 next_sibling.html",
-        "5 find.html",
-        "9 nextUntil_siblings.html",
-        "6 siblings.html",
-        "3 parentsUntil.html",
-        "2 parents.html",
-        "16 filter_filtering.html",
-        "11 prevAll_siblings.html",
-        "8 nextAll_siblings.html",
-        "10 prev_sibling.html",
-      ];
+<body class="bg-neutral-950 text-white font-sans p-4">
+  <h1 class="text-3xl font-bold mb-6">JQuery Traversing File List</h1>
+  <div id="file-list" class="space-y-2"></div>
 
-      // Filter only `.html` files
-      const htmlFiles = files.filter((file) => file.endsWith(".html"));
+  <script>
+    // File list
+    const files = [
+      "1 parent.html",
+      "2 parents.html",
+      "3 parentsUntil.html",
+      "4 children.html",
+      "5 find.html",
+      "6 siblings.html",
+      "7 next_sibling.html",
+      "8 nextAll_siblings.html",
+      "9 nextUntil_siblings.html",
+      "10 prev_sibling.html",
+      "11 prevAll_siblings.html",
+      "12 prevUntil_siblings.html",
+      "13 first_filtering.html",
+      "14 last_filtering.html",
+      "15 eq_filtering.html",
+      "16 filter_filtering.html",
+      "17 not_filtering.html",
+    ];
 
-      // Container for the file list
-      const fileListContainer = document.getElementById("file-list");
+    // Filter only `.html` files
+    const htmlFiles = files.filter((file) => file.endsWith(".html"));
 
-      // Create links for each HTML file
-      htmlFiles.forEach((file) => {
-        const link = document.createElement("a");
-        link.href = `./${file}`;
-        link.textContent = file;
-        link.className = "text-rose-400 hover:underline block";
-        fileListContainer.appendChild(link);
-      });
-    </script>
-  </body>
+    // Container for the file list
+    const fileListContainer = document.getElementById("file-list");
+
+    // Create links for each HTML file
+    htmlFiles.forEach((file) => {
+      const link = document.createElement("a");
+      link.href = `./${file}`;
+      link.textContent = file;
+      link.className = "text-rose-400 hover:underline block";
+      fileListContainer.appendChild(link);
+    });
+  </script>
+</body>
+
 </html>
