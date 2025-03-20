@@ -1,83 +1,58 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MWP Notes</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script
-      src="https://kit.fontawesome.com/0b92670209.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              poppins: ["Poppins"],
-            },
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MWP Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/0b92670209.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ["Poppins"],
           },
         },
-      };
-    </script>
-  </head>
+      },
+    };
+  </script>
+</head>
 
-  <body
-    class="bg-neutral-950 text-white font-poppins flex flex-col items-center justify-between min-h-screen"
-  >
-    <!-- Navigation Bar -->
-    <nav
-      class="w-screen h-20 bg-neutral-900 flex items-center justify-between p-4"
-    >
-      <a href="/" class="text-4xl font-bold"> Home </a>
-      <a
-        href="https://github.com/dracuxan/mwp-notes"
-        target="_blank"
-        class="text-4xl"
-      >
-        <i class="fab fa-github"></i>
-      </a>
-    </nav>
+<body class="bg-neutral-950 text-white font-poppins flex flex-col items-center justify-between min-h-screen">
+  <!-- Navigation Bar -->
+  <nav class="w-screen h-20 bg-neutral-900 flex items-center justify-between p-4">
+    <a href="/" class="text-4xl font-bold"> Home </a>
+    <a href="https://github.com/dracuxan/mwp-notes" target="_blank" class="text-4xl">
+      <i class="fab fa-github"></i>
+    </a>
+  </nav>
 
-    <!-- Content Section -->
-    <div class="flex flex-col items-center gap-4 mt-20">
-      <div>
-        <a href="/HTML/page1.html" class="text-xl text-rose-500 hover:underline"
-          >HTML Codes</a
-        >
-      </div>
-      <div>
-        <a href="/CSS/page1.html" class="text-xl text-rose-500 hover:underline"
-          >CSS Codes</a
-        >
-      </div>
-      <div>
-        <a
-          href="/Bootstrap 5/page3.html"
-          class="text-xl text-rose-500 hover:underline"
-          >CSS Codes</a
-        >
-      </div>
+  <!-- Content Section -->
+  <div class="flex flex-col items-center gap-4 mt-20">
+    <div>
+      <a href="/HTML/page1.html" class="text-xl text-rose-500 hover:underline">HTML Codes</a>
     </div>
+    <div>
+      <a href="/CSS/page1.html" class="text-xl text-rose-500 hover:underline">CSS Codes</a>
+    </div>
+    <div>
+      <a href="/Bootstrap 5/page3.html" class="text-xl text-rose-500 hover:underline">Bootstrap Codes</a>
+    </div>
+  </div>
 
-    <!-- Footer -->
-    <footer
-      class="w-screen h-12 bg-neutral-900 drop-shadow-2xl flex items-center justify-center p-4"
-    >
-      <span class="text-sm">
-        © 2024
-        <a
-          class="text-rose-500 underline hover:no-underline"
-          href="https://bynisarg.in"
-          target="_blank"
-        >
-          Nisarg
-        </a>
-      </span>
-    </footer>
-  </body>
+  <!-- Footer -->
+  <footer class="w-screen h-12 bg-neutral-900 drop-shadow-2xl flex items-center justify-center p-4">
+    <span class="text-sm">
+      © 2024
+      <a class="text-rose-500 underline hover:no-underline" href="https://bynisarg.in" target="_blank">
+        Nisarg
+      </a>
+    </span>
+  </footer>
+</body>
+
 </html>
