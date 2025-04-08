@@ -3,32 +3,209 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Code Block Example</title>
+    <title>Lab Exam Codes</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body class="bg-neutral-950 text-white font-sans p-4">
-    <div class="relative bg-neutral-900 text-sm p-4 rounded-lg overflow-x-auto">
-      <button
-        onclick="copyCode()"
-        class="absolute top-2 right-2 bg-neutral-800 hover:bg-neutral-700 text-xs text-white px-2 py-1 rounded"
-      >
-        Copy
-      </button>
-
-      <pre><code id="codeBlock">
-        def hello():
-        print("Hello, World!")
-      </code></pre>
-    </div>
+  <body class="bg-neutral-950 text-white font-sans p-4 space-y-8">
+    <h1 class="text-3xl font-bold mb-4">Lab Exam - Codes with Explanation</h1>
 
     <script>
-      function copyCode() {
-        const code = document.getElementById("codeBlock").innerText;
+      function copyCode(id, btn) {
+        const code = document.getElementById(id).innerText;
         navigator.clipboard.writeText(code).then(() => {
-          alert("Code copied to clipboard!");
+          btn.innerText = "Copied!";
+          setTimeout(() => (btn.innerText = "Copy"), 1500);
         });
       }
     </script>
+
+    <!-- 1. GBFS -->
+    <div>
+      <h2 class="text-xl font-semibold mb-2">
+        1. Greedy Best First Search (GBFS)
+      </h2>
+      <pre id="code1" class="bg-neutral-800 p-4 rounded text-sm overflow-auto">
+      from queue import PriorityQueue
+
+      class Graph:
+      def __init__(self):
+      self.edges = {}
+      self.h = {}
+
+      def add_edge(self, u, v, cost):
+      if u not in self.edges:
+      self.edges[u] = []
+      self.edges[u].append(v)
+
+      def gbfs(self, start, goal):
+      visited = set()
+      pq = PriorityQueue()
+      pq.put((self.h[start], start))
+
+      while not pq.empty():
+      _, current = pq.get()
+      print(current, end=" ")
+      if current == goal:
+      break
+      visited.add(current)
+
+      for neighbor in self.edges.get(current, []):
+      if neighbor not in visited:
+      pq.put((self.h[neighbor], neighbor))
+
+      # Example Usage
+      g = Graph()
+      g.h = {'A': 3, 'B': 2, 'C': 1, 'D': 0}
+      g.add_edge('A', 'B', 1)
+      g.add_edge('A', 'C', 1)
+      g.add_edge('B', 'D', 1)
+      g.add_edge('C', 'D', 1)
+
+      print("GBFS Path:")
+      g.gbfs('A', 'D')
+    </pre
+      >
+    </div>
+
+    <!-- 2. A* Algorithm -->
+    <div>
+      <h2 class="text-xl font-semibold mb-2">2. A* Algorithm</h2>
+      <pre id="code2" class="bg-neutral-800 p-4 rounded text-sm overflow-auto">
+      from queue import PriorityQueue
+
+      class Graph:
+      def __init__(self):
+      self.edges = {}
+      self.h = {}
+      self.cost = {}
+
+      def add_edge(self, u, v, cost):
+      if u not in self.edges:
+      self.edges[u] = []
+      self.edges[u].append(v)
+      self.cost[(u, v)] = cost
+
+      def astar(self, start, goal):
+      pq = PriorityQueue()
+      pq.put((self.h[start], 0, start))
+      visited = set()
+
+      while not pq.empty():
+      _, g_cost, current = pq.get()
+      print(current, end=" ")
+      if current == goal:
+      break
+      visited.add(current)
+
+      for neighbor in self.edges.get(current, []):
+      if neighbor not in visited:
+      total_cost = g_cost + self.cost[(current, neighbor)]
+      f = total_cost + self.h[neighbor]
+      pq.put((f, total_cost, neighbor))
+
+      # Example Usage
+      g = Graph()
+      g.h = {'A': 4, 'B': 2, 'C': 1, 'D': 0}
+      g.add_edge('A', 'B', 1)
+      g.add_edge('A', 'C', 3)
+      g.add_edge('B', 'D', 1)
+      g.add_edge('C', 'D', 1)
+
+      print("A* Path:")
+      g.astar('A', 'D')
+    </pre
+      >
+    </div>
+
+    <!-- 3. 8 Tiles Problem -->
+    <div>
+      <h2 class="text-xl font-semibold mb-2">3. 8 Tiles Problem (A* based)</h2>
+      <pre id="code3" class="bg-neutral-800 p-4 rounded text-sm overflow-auto">
+      from queue import PriorityQueue
+
+      start = '123456780'
+      goal = '123456780'
+
+      moves = {
+      0: [1, 3],
+      1: [0, 2, 4],
+      2: [1, 5],
+      3: [0, 4, 6],
+      4: [1, 3, 5, 7],
+      5: [2, 4, 8],
+      6: [3, 7],
+      7: [4, 6, 8],
+      8: [5, 7]
+      }
+
+      def heuristic(state, goal):
+      return sum([1 for i in range(9) if state[i] != goal[i]])
+
+      visited = set()
+      pq = PriorityQueue()
+      pq.put((heuristic(start, goal), start))
+
+      while not pq.empty():
+      _, state = pq.get()
+      print(state)
+      if state == goal:
+      break
+      visited.add(state)
+
+      idx = state.index('0')
+
+      for move in moves[idx]:
+      lst = list(state)
+      lst[idx], lst[move] = lst[move], lst[idx]
+      new_state = ''.join(lst)
+
+      if new_state not in visited:
+      pq.put((heuristic(new_state, goal), new_state))
+    </pre
+      >
+    </div>
+
+    <!-- 4. Decision Tree -->
+    <div>
+      <h2 class="text-xl font-semibold mb-2">
+        4. Decision Tree (using sklearn)
+      </h2>
+      <pre id="code4" class="bg-neutral-800 p-4 rounded text-sm overflow-auto">
+      from sklearn.datasets import load_iris
+      from sklearn.tree import DecisionTreeClassifier
+
+      iris = load_iris()
+      X, y = iris.data, iris.target
+
+      model = DecisionTreeClassifier()
+      model.fit(X, y)
+
+      sample = [[5.1, 3.5, 1.4, 0.2]]
+      print("Prediction:", model.predict(sample))
+    </pre
+      >
+    </div>
+
+    <!-- 5. K-Means Clustering -->
+    <div>
+      <h2 class="text-xl font-semibold mb-2">
+        5. K-Means Clustering (using sklearn)
+      </h2>
+      <pre id="code5" class="bg-neutral-800 p-4 rounded text-sm overflow-auto">
+      from sklearn.cluster import KMeans
+      import numpy as np
+
+      X = np.array([
+      [1, 2], [1, 4], [1, 0],
+      [10, 2], [10, 4], [10, 0]
+      ])
+
+      kmeans = KMeans(n_clusters=2, random_state=0).fit(X)
+      print("Cluster Centers:", kmeans.cluster_centers_)
+      print("Labels:", kmeans.labels_)
+    </pre
+      >
+    </div>
   </body>
 </html>
